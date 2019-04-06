@@ -8,7 +8,7 @@ class Vector {
 
   plus(nextVector) {
     if (!Vector.prototype.isPrototypeOf(nextVector)) {
-      throw ('Можно прибавлять к вектору только вектор типа Vector');
+      throw new Error('Можно прибавлять к вектору только вектор типа Vector');
     }
     let newVector = new Vector();
     newVector.x = this.x + nextVector.x;
